@@ -17,10 +17,13 @@ export default function Navbar(props) {
     <Link to='/cart'>
   <button type="button" className="btn btn-primary position-relative"style={{backgroundColor:"lightBlue"}}>
   <img src={Cart} alt="" style={{backgroundColor:"lightBlue","height":"30px"}}/>
+  { 
+  props.cart>=1?
   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">
     {props.cart}
-    <span className="visually-hidden">unread messages</span>
-  </span>
+   
+  </span>:null
+  }
 </button>
 </Link>
       </li>

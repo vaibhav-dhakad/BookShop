@@ -4,7 +4,7 @@ export default function Cart(props){
  
     return (
         <>
-      <div className="row" >{props.product.map((val,index)=>{return(<div className="col-md-3" key={index}><div class="card" style={{"width": "18rem"}}>
+      <div className="row" >{props.product?.map((val,index)=>{return(<div className="col-md-3" key={index}><div class="card" style={{"width": "18rem"}}>
   <img class="card-img-top" src={val[0].volumeInfo.imageLinks.thumbnail } alt=''/>
   <div class="card-body">
     <h5 class="card-title">{val[0].volumeInfo.title }</h5>
